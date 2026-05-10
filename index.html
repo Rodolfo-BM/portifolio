@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =============================================
+    META TAGS — edite conforme necessário
+  =============================================== -->
+  <title>Rodolfo Batista de Morais — Desenvolvedor</title>
+  <meta name="description" content="Currículo e portfólio de Rodolfo Batista de Morais, desenvolvedor full-stack." />
+  <meta name="author" content="Rodolfo Batista de Morais" />
+
+  <!-- Open Graph (prévia ao compartilhar o link) -->
+  <meta property="og:title" content="Rodolfo Batista de Morais" />
+  <meta property="og:description" content="Desenvolvedor full-stack apaixonado por dados e boas soluções." />
+  <meta property="og:url" content="https://rodolfobatistademorais.com.br" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =============================================
+    TOPBAR / NAVEGAÇÃO
+  =============================================== -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+
+      <a href="#" class="topbar__brand">
+        <span class="brand-name" data-pt="Rodolfo Morais" data-en="Rodolfo Morais">Rodolfo Morais</span>
+        <span class="brand-slash">/</span>
+        <span class="brand-role" data-pt="dev" data-en="dev">dev</span>
+      </a>
+
+      <nav class="topbar__nav" aria-label="Navegação principal">
+        <a href="#sobre"       data-pt="Sobre"       data-en="About">Sobre</a>
+        <a href="#experiencia" data-pt="Experiência"  data-en="Experience">Experiência</a>
+        <a href="#formacao"    data-pt="Formação"     data-en="Education">Formação</a>
+        <a href="#habilidades" data-pt="Habilidades"  data-en="Skills">Habilidades</a>
+        <a href="#projetos"    data-pt="Projetos"     data-en="Projects">Projetos</a>
+        <a href="#contato"     data-pt="Contato"      data-en="Contact">Contato</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <!-- Botão de idioma -->
+        <button class="lang-toggle" id="langToggle" aria-label="Alternar idioma">
+          <span class="lang-option" id="langPT">PT</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-option" id="langEN">EN</span>
+        </button>
+
+        <!-- Botão hambúrguer (mobile) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menu mobile expandido -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação mobile">
+      <a href="#sobre"       data-pt="Sobre"       data-en="About">Sobre</a>
+      <a href="#experiencia" data-pt="Experiência"  data-en="Experience">Experiência</a>
+      <a href="#formacao"    data-pt="Formação"     data-en="Education">Formação</a>
+      <a href="#habilidades" data-pt="Habilidades"  data-en="Skills">Habilidades</a>
+      <a href="#projetos"    data-pt="Projetos"     data-en="Projects">Projetos</a>
+      <a href="#contato"     data-pt="Contato"      data-en="Contact">Contato</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- =============================================
+      HERO — Apresentação principal
+    =============================================== -->
+    <section class="hero">
+      <div class="container hero__inner">
+
+        <div class="hero__avatar" aria-hidden="true">RBM</div>
+
+        <div class="hero__text">
+          <h1 class="hero__name">Rodolfo Batista de Morais</h1>
+
+          <p class="hero__role" data-pt="Desenvolvedor · Goiânia, GO" data-en="Developer · Goiânia, GO">
+            Desenvolvedor · Goiânia, GO
+          </p>
+
+          <p class="hero__tagline"
+            data-pt="Almejando uma carreira em desenvolvimento e engenharia de dados. Orientado a detalhes e resultados, impulsionado pelo aprendizado contínuo."
+            data-en="Aiming for a career in software development and data engineering. Detail-oriented and results-driven, fueled by continuous learning.">
+            Almejando uma carreira em desenvolvimento e engenharia de dados. Orientado a detalhes e resultados, impulsionado pelo aprendizado contínuo.
+          </p>
+
+          <div class="hero__links">
+            <a href="mailto:rodolfobatistademorais@outlook.com" class="hero__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+              <span>rodolfobatistademorais@outlook.com</span>
+            </a>
+            <a href="tel:+5562999200070" class="hero__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>(62) 99920-0070</span>
+            </a>
+            <a href="https://www.linkedin.com/in/rodolfobatistademorais" target="_blank" rel="noopener" class="hero__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>linkedin.com/in/rodolfobatistademorais</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =============================================
+      SOBRE MIM
+    =============================================== -->
+    <section id="sobre" class="section">
+      <div class="container">
+
+        <h2 class="section__title" data-pt="Sobre mim" data-en="About me">Sobre mim</h2>
+
+        <p class="section__body"
+          data-pt="Sou um desenvolvedor com experiência em suporte técnico e ambientes corporativos, em transição para desenvolvimento full-stack e engenharia de dados. Tenho formação em Gestão de Tecnologia da Informação, experiência com liderança de equipes e um forte interesse em construir sistemas que resolvam problemas reais — com atenção aos detalhes e foco em resultados."
+          data-en="I am a developer with experience in technical support and corporate environments, transitioning into full-stack development and data engineering. I hold a degree in IT Management, have experience leading teams, and a strong interest in building systems that solve real problems — with attention to detail and a results-driven mindset.">
+          Sou um desenvolvedor com experiência em suporte técnico e ambientes corporativos, em transição para desenvolvimento full-stack e engenharia de dados. Tenho formação em Gestão de Tecnologia da Informação, experiência com liderança de equipes e um forte interesse em construir sistemas que resolvam problemas reais — com atenção aos detalhes e foco em resultados.
+        </p>
+
+        <div class="lang-badges">
+          <span class="badge" data-pt="Português: Nativo" data-en="Portuguese: Native">Português: Nativo</span>
+          <span class="badge" data-pt="Inglês: Avançado"  data-en="English: Advanced">Inglês: Avançado</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =============================================
+      EXPERIÊNCIA
+    =============================================== -->
+    <section id="experiencia" class="section section--alt">
+      <div class="container">
+
+        <h2 class="section__title" data-pt="Experiência" data-en="Experience">Experiência</h2>
+
+        <div class="timeline">
+
+          <!-- ---- Item 1 ---- -->
+          <article class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role"
+                    data-pt="Assistente de Informática"
+                    data-en="IT Assistant (Lead)">
+                    Assistente de Informática
+                  </h3>
+                  <p class="timeline__company">Atacadão Goiânia</p>
+                </div>
+                <span class="timeline__period"
+                  data-pt="Nov 2023 – Atual"
+                  data-en="Nov 2023 – Present">
+                  Nov 2023 – Atual
+                </span>
+              </div>
+              <ul class="timeline__list">
+                <li data-pt="Liderança da equipe de suporte de informática, incluindo gestão de escalas e folgas."
+                    data-en="Led the IT support team, including schedule and time-off management.">
+                  Liderança da equipe de suporte de informática, incluindo gestão de escalas e folgas.
+                </li>
+                <li data-pt="Supervisão de rotinas executadas pela equipe."
+                    data-en="Supervised routines carried out by the team.">
+                  Supervisão de rotinas executadas pela equipe.
+                </li>
+                <li data-pt="Desenvolvimento de novas rotinas e sistemas para melhorar as operações da loja."
+                    data-en="Developed new routines and internal systems to improve store operations.">
+                  Desenvolvimento de novas rotinas e sistemas para melhorar as operações da loja.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ---- Item 2 ---- -->
+          <article class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role"
+                    data-pt="Auxiliar de Informática"
+                    data-en="IT Technician">
+                    Auxiliar de Informática
+                  </h3>
+                  <p class="timeline__company">Atacadão Goiânia</p>
+                </div>
+                <span class="timeline__period"
+                  data-pt="Abr 2023 – Out 2023"
+                  data-en="Apr 2023 – Oct 2023">
+                  Abr 2023 – Out 2023
+                </span>
+              </div>
+              <ul class="timeline__list">
+                <li data-pt="Suporte de primeiro nível para usuários internos."
+                    data-en="Provided first-level support for internal users.">
+                  Suporte de primeiro nível para usuários internos.
+                </li>
+                <li data-pt="Manutenção e reparo de computadores, impressoras e equipamentos de rede."
+                    data-en="Maintained and repaired computers, printers, and network equipment.">
+                  Manutenção e reparo de computadores, impressoras e equipamentos de rede.
+                </li>
+                <li data-pt="Montagem e manutenção de estações de trabalho e PDVs (pontos de venda)."
+                    data-en="Assembled and maintained workstations and POS (point-of-sale) terminals.">
+                  Montagem e manutenção de estações de trabalho e PDVs (pontos de venda).
+                </li>
+                <li data-pt="Manutenção de servidores locais e execução de rotinas de scripts diários."
+                    data-en="Maintained local servers and executed daily script routines for store opening and closing.">
+                  Manutenção de servidores locais e execução de rotinas de scripts diários.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ---- Item 3 ---- -->
+          <article class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__header">
+                <div>
+                  <h3 class="timeline__role"
+                    data-pt="Estagiário de TI"
+                    data-en="IT Intern">
+                    Estagiário de TI
+                  </h3>
+                  <p class="timeline__company">HDN Bombas</p>
+                </div>
+                <span class="timeline__period"
+                  data-pt="Jun 2019 – Ago 2019"
+                  data-en="Jun 2019 – Aug 2019">
+                  Jun 2019 – Ago 2019
+                </span>
+              </div>
+              <ul class="timeline__list">
+                <li data-pt="Manutenção e reparo de computadores, impressoras e equipamentos de rede."
+                    data-en="Maintained and repaired computers, printers, and network equipment.">
+                  Manutenção e reparo de computadores, impressoras e equipamentos de rede.
+                </li>
+                <li data-pt="Criação de consultas SQL para a equipe administrativa acessar dados."
+                    data-en="Created SQL queries for the administrative team to access operational data.">
+                  Criação de consultas SQL para a equipe administrativa acessar dados.
+                </li>
+                <li data-pt="Suporte técnico e solução de problemas relacionados ao banco de dados."
+                    data-en="Provided technical support and troubleshooting related to database issues.">
+                  Suporte técnico e solução de problemas relacionados ao banco de dados.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+      FORMAÇÃO
+    =============================================== -->
+    <section id="formacao" class="section">
+      <div class="container">
+
+        <h2 class="section__title" data-pt="Formação" data-en="Education">Formação</h2>
+
+        <article class="edu-card">
+          <div class="edu-card__header">
+            <div>
+              <h3 class="edu-card__degree"
+                data-pt="Tecnólogo em Gestão de Tecnologia da Informação"
+                data-en="Associate Degree in IT Management">
+                Tecnólogo em Gestão de Tecnologia da Informação
+              </h3>
+              <p class="edu-card__institution">Faculdade Senac Goiás</p>
+            </div>
+          </div>
+          <p class="edu-card__note"
+            data-pt="Monitoria por dois semestres em Lógica de Programação e Algoritmos."
+            data-en="Teaching assistant for two semesters in Programming Logic and Algorithms.">
+            Monitoria por dois semestres em Lógica de Programação e Algoritmos.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =============================================
+      HABILIDADES
+    =============================================== -->
+    <section id="habilidades" class="section section--alt">
+      <div class="container">
+
+        <h2 class="section__title" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
+
+        <div class="skills-grid">
+
+          <div class="skills-group">
+            <h3 class="skills-group__title" data-pt="Linguagens" data-en="Languages">Linguagens</h3>
+            <div class="skills-group__tags">
+              <span class="tag">Java</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Python</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">PHP</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group__title" data-pt="Banco de dados" data-en="Databases">Banco de dados</h3>
+            <div class="skills-group__tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MariaDB</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group__title" data-pt="Frameworks & Ferramentas" data-en="Frameworks & Tools">Frameworks & Ferramentas</h3>
+            <div class="skills-group__tags">
+              <span class="tag">Spring</span>
+              <span class="tag">Angular</span>
+              <span class="tag">Bootstrap</span>
+              <span class="tag">Pentaho</span>
+              <span class="tag">Astah UML</span>
+              <span class="tag">Pacote Office</span>
+            </div>
+          </div>
+
+          <div class="skills-group">
+            <h3 class="skills-group__title" data-pt="Competências" data-en="Soft Skills">Competências</h3>
+            <div class="skills-group__tags">
+              <span class="tag tag--soft" data-pt="Pensamento analítico"  data-en="Analytical thinking">Pensamento analítico</span>
+              <span class="tag tag--soft" data-pt="Liderança de equipes"  data-en="Team leadership">Liderança de equipes</span>
+              <span class="tag tag--soft" data-pt="Atenção aos detalhes"  data-en="Attention to detail">Atenção aos detalhes</span>
+              <span class="tag tag--soft" data-pt="Gestão de tempo"       data-en="Time management">Gestão de tempo</span>
+              <span class="tag tag--soft" data-pt="Trabalho em equipe"    data-en="Teamwork">Trabalho em equipe</span>
+              <span class="tag tag--soft" data-pt="Boa comunicação"       data-en="Communication">Boa comunicação</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+      PROJETOS
+      — Adicione cards aqui conforme os projetos forem ficando prontos.
+      — Exemplo de card comentado abaixo.
+    =============================================== -->
+    <section id="projetos" class="section">
+      <div class="container">
+
+        <h2 class="section__title" data-pt="Projetos" data-en="Projects">Projetos</h2>
+
+        <!-- PLACEHOLDER — remova quando tiver projetos reais -->
+        <p class="placeholder-text"
+          data-pt="Projetos em desenvolvimento. Em breve aqui."
+          data-en="Projects in development. Coming soon.">
+          Projetos em desenvolvimento. Em breve aqui.
+        </p>
+
+        <div class="projects-grid">
+
+          <!--
+          === TEMPLATE DE CARD DE PROJETO ===
+          Copie e cole este bloco para adicionar um novo projeto.
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <h3 class="project-card__title">Nome do Projeto</h3>
+              <div class="project-card__links">
+                <a href="https://github.com/..." target="_blank" rel="noopener" aria-label="Ver no GitHub">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+                <a href="https://..." target="_blank" rel="noopener" aria-label="Ver projeto ao vivo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <p class="project-card__desc"
+              data-pt="Descrição curta do projeto em português."
+              data-en="Short project description in English.">
+              Descrição curta do projeto em português.
+            </p>
+            <div class="project-card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </article>
+          -->
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+      CONTATO
+    =============================================== -->
+    <section id="contato" class="section section--alt">
+      <div class="container">
+
+        <h2 class="section__title" data-pt="Contato" data-en="Contact">Contato</h2>
+
+        <p class="section__body"
+          data-pt="Fique à vontade para entrar em contato por qualquer um dos canais abaixo."
+          data-en="Feel free to reach out through any of the channels below.">
+          Fique à vontade para entrar em contato por qualquer um dos canais abaixo.
+        </p>
+
+        <div class="contact-list">
+          <a href="mailto:rodolfobatistademorais@outlook.com" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            <span>rodolfobatistademorais@outlook.com</span>
+          </a>
+          <a href="tel:+5562999200070" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(62) 99920-0070</span>
+          </a>
+          <a href="https://www.linkedin.com/in/rodolfobatistademorais" target="_blank" rel="noopener" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>linkedin.com/in/rodolfobatistademorais</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =============================================
+    FOOTER
+  =============================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span data-pt="© 2025 Rodolfo Batista de Morais" data-en="© 2025 Rodolfo Batista de Morais">
+        © 2025 Rodolfo Batista de Morais
+      </span>
+      <span class="footer__built" data-pt="Feito com HTML, CSS e JS." data-en="Built with HTML, CSS & JS.">
+        Feito com HTML, CSS e JS.
+      </span>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
