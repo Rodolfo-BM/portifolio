@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- =============================================
-    META TAGS — edite conforme necessário
-  =============================================== -->
   <title>Rodolfo Batista de Morais — Desenvolvedor</title>
   <meta name="description" content="Currículo e portfólio de Rodolfo Batista de Morais, desenvolvedor full-stack." />
   <meta name="author" content="Rodolfo Batista de Morais" />
 
-  <!-- Open Graph (prévia ao compartilhar o link) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Rodolfo Batista de Morais" />
   <meta property="og:description" content="Desenvolvedor full-stack apaixonado por dados e boas soluções." />
   <meta property="og:url" content="https://rodolfobatistademorais.com.br" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://rodolfobatistademorais.com.br/og-image.png" />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌨</text></svg>" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,9 +27,7 @@
 </head>
 <body>
 
-  <!-- =============================================
-    TOPBAR / NAVEGAÇÃO
-  =============================================== -->
+  <!-- TOPBAR -->
   <header class="topbar">
     <div class="container topbar__inner">
 
@@ -38,24 +37,16 @@
         <span class="brand-role" data-pt="dev" data-en="dev">dev</span>
       </a>
 
-      <nav class="topbar__nav" aria-label="Navegação principal">
-        <a href="#sobre"       data-pt="Sobre"       data-en="About">Sobre</a>
-        <a href="#experiencia" data-pt="Experiência"  data-en="Experience">Experiência</a>
-        <a href="#formacao"    data-pt="Formação"     data-en="Education">Formação</a>
-        <a href="#habilidades" data-pt="Habilidades"  data-en="Skills">Habilidades</a>
-        <a href="#projetos"    data-pt="Projetos"     data-en="Projects">Projetos</a>
-        <a href="#contato"     data-pt="Contato"      data-en="Contact">Contato</a>
-      </nav>
+      <!-- Nav única — gerada via JS para evitar duplicação -->
+      <nav class="topbar__nav" id="desktopNav" aria-label="Navegação principal"></nav>
 
       <div class="topbar__actions">
-        <!-- Botão de idioma -->
         <button class="lang-toggle" id="langToggle" aria-label="Alternar idioma">
           <span class="lang-option" id="langPT">PT</span>
           <span class="lang-sep">|</span>
           <span class="lang-option" id="langEN">EN</span>
         </button>
 
-        <!-- Botão hambúrguer (mobile) -->
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -63,42 +54,35 @@
 
     </div>
 
-    <!-- Menu mobile expandido -->
-    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação mobile">
-      <a href="#sobre"       data-pt="Sobre"       data-en="About">Sobre</a>
-      <a href="#experiencia" data-pt="Experiência"  data-en="Experience">Experiência</a>
-      <a href="#formacao"    data-pt="Formação"     data-en="Education">Formação</a>
-      <a href="#habilidades" data-pt="Habilidades"  data-en="Skills">Habilidades</a>
-      <a href="#projetos"    data-pt="Projetos"     data-en="Projects">Projetos</a>
-      <a href="#contato"     data-pt="Contato"      data-en="Contact">Contato</a>
-    </nav>
+    <!-- Menu mobile gerado via JS -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegação mobile"></nav>
   </header>
 
 
   <main>
 
-    <!-- =============================================
-      HERO — Apresentação principal
-    =============================================== -->
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__inner">
 
         <div class="hero__avatar" aria-hidden="true">RBM</div>
 
         <div class="hero__text">
-          <h1 class="hero__name">Rodolfo Batista de Morais</h1>
+          <h1 class="hero__name reveal">Rodolfo Batista de Morais</h1>
 
-          <p class="hero__role" data-pt="Desenvolvedor · Goiânia, GO" data-en="Developer · Goiânia, GO">
+          <p class="hero__role reveal" style="--delay: 0.1s"
+            data-pt="Desenvolvedor · Goiânia, GO"
+            data-en="Developer · Goiânia, GO">
             Desenvolvedor · Goiânia, GO
           </p>
 
-          <p class="hero__tagline"
+          <p class="hero__tagline reveal" style="--delay: 0.2s"
             data-pt="Almejando uma carreira em desenvolvimento e engenharia de dados. Orientado a detalhes e resultados, impulsionado pelo aprendizado contínuo."
             data-en="Aiming for a career in software development and data engineering. Detail-oriented and results-driven, fueled by continuous learning.">
             Almejando uma carreira em desenvolvimento e engenharia de dados. Orientado a detalhes e resultados, impulsionado pelo aprendizado contínuo.
           </p>
 
-          <div class="hero__links">
+          <div class="hero__links reveal" style="--delay: 0.3s">
             <a href="mailto:rodolfobatistademorais@outlook.com" class="hero__link">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
               <span>rodolfobatistademorais@outlook.com</span>
@@ -111,6 +95,10 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               <span>linkedin.com/in/rodolfobatistademorais</span>
             </a>
+            <a href="https://github.com/rodolfobatistademorais" target="_blank" rel="noopener" class="hero__link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>github.com/rodolfobatistademorais</span>
+            </a>
           </div>
         </div>
 
@@ -118,10 +106,8 @@
     </section>
 
 
-    <!-- =============================================
-      SOBRE MIM
-    =============================================== -->
-    <section id="sobre" class="section">
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="section reveal-section">
       <div class="container">
 
         <h2 class="section__title" data-pt="Sobre mim" data-en="About me">Sobre mim</h2>
@@ -141,17 +127,14 @@
     </section>
 
 
-    <!-- =============================================
-      EXPERIÊNCIA
-    =============================================== -->
-    <section id="experiencia" class="section section--alt">
+    <!-- EXPERIÊNCIA -->
+    <section id="experiencia" class="section section--alt reveal-section">
       <div class="container">
 
         <h2 class="section__title" data-pt="Experiência" data-en="Experience">Experiência</h2>
 
         <div class="timeline">
 
-          <!-- ---- Item 1 ---- -->
           <article class="timeline__item">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
@@ -187,7 +170,6 @@
             </div>
           </article>
 
-          <!-- ---- Item 2 ---- -->
           <article class="timeline__item">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
@@ -227,7 +209,6 @@
             </div>
           </article>
 
-          <!-- ---- Item 3 ---- -->
           <article class="timeline__item">
             <div class="timeline__marker" aria-hidden="true"></div>
             <div class="timeline__content">
@@ -268,10 +249,8 @@
     </section>
 
 
-    <!-- =============================================
-      FORMAÇÃO
-    =============================================== -->
-    <section id="formacao" class="section">
+    <!-- FORMAÇÃO -->
+    <section id="formacao" class="section reveal-section">
       <div class="container">
 
         <h2 class="section__title" data-pt="Formação" data-en="Education">Formação</h2>
@@ -298,10 +277,8 @@
     </section>
 
 
-    <!-- =============================================
-      HABILIDADES
-    =============================================== -->
-    <section id="habilidades" class="section section--alt">
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="section section--alt reveal-section">
       <div class="container">
 
         <h2 class="section__title" data-pt="Habilidades" data-en="Skills">Habilidades</h2>
@@ -360,29 +337,31 @@
     </section>
 
 
-    <!-- =============================================
-      PROJETOS
-      — Adicione cards aqui conforme os projetos forem ficando prontos.
-      — Exemplo de card comentado abaixo.
-    =============================================== -->
-    <section id="projetos" class="section">
+    <!-- PROJETOS -->
+    <section id="projetos" class="section reveal-section">
       <div class="container">
 
         <h2 class="section__title" data-pt="Projetos" data-en="Projects">Projetos</h2>
 
-        <!-- PLACEHOLDER — remova quando tiver projetos reais -->
-        <p class="placeholder-text"
-          data-pt="Projetos em desenvolvimento. Em breve aqui."
-          data-en="Projects in development. Coming soon.">
-          Projetos em desenvolvimento. Em breve aqui.
-        </p>
+        <div class="github-cta">
+          <div class="github-cta__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </div>
+          <div class="github-cta__text">
+            <p class="github-cta__label" data-pt="Projetos em desenvolvimento." data-en="Projects in development.">Projetos em desenvolvimento.</p>
+            <p class="github-cta__sub" data-pt="Acompanhe meu progresso no GitHub enquanto os projetos ficam prontos." data-en="Follow my progress on GitHub while projects are in development.">Acompanhe meu progresso no GitHub enquanto os projetos ficam prontos.</p>
+          </div>
+          <a href="https://github.com/rodolfobatistademorais" target="_blank" rel="noopener" class="github-cta__btn">
+            <span data-pt="Ver GitHub" data-en="View GitHub">Ver GitHub</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+
+        <!--
+        === TEMPLATE DE CARD DE PROJETO ===
+        Copie e cole este bloco dentro de .projects-grid para adicionar um projeto.
 
         <div class="projects-grid">
-
-          <!--
-          === TEMPLATE DE CARD DE PROJETO ===
-          Copie e cole este bloco para adicionar um novo projeto.
-
           <article class="project-card">
             <div class="project-card__header">
               <h3 class="project-card__title">Nome do Projeto</h3>
@@ -390,32 +369,26 @@
                 <a href="https://github.com/..." target="_blank" rel="noopener" aria-label="Ver no GitHub">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                 </a>
-                <a href="https://..." target="_blank" rel="noopener" aria-label="Ver projeto ao vivo">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
               </div>
             </div>
             <p class="project-card__desc"
-              data-pt="Descrição curta do projeto em português."
-              data-en="Short project description in English.">
-              Descrição curta do projeto em português.
+              data-pt="Descrição em português."
+              data-en="Description in English.">
+              Descrição em português.
             </p>
             <div class="project-card__tags">
               <span class="tag">Python</span>
-              <span class="tag">PostgreSQL</span>
             </div>
           </article>
-          -->
-
         </div>
+        -->
+
       </div>
     </section>
 
 
-    <!-- =============================================
-      CONTATO
-    =============================================== -->
-    <section id="contato" class="section section--alt">
+    <!-- CONTATO -->
+    <section id="contato" class="section section--alt reveal-section">
       <div class="container">
 
         <h2 class="section__title" data-pt="Contato" data-en="Contact">Contato</h2>
@@ -439,6 +412,10 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <span>linkedin.com/in/rodolfobatistademorais</span>
           </a>
+          <a href="https://github.com/rodolfobatistademorais" target="_blank" rel="noopener" class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>github.com/rodolfobatistademorais</span>
+          </a>
         </div>
 
       </div>
@@ -447,14 +424,10 @@
   </main>
 
 
-  <!-- =============================================
-    FOOTER
-  =============================================== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span data-pt="© 2025 Rodolfo Batista de Morais" data-en="© 2025 Rodolfo Batista de Morais">
-        © 2025 Rodolfo Batista de Morais
-      </span>
+      <span id="footerCopy"></span>
       <span class="footer__built" data-pt="Feito com HTML, CSS e JS." data-en="Built with HTML, CSS & JS.">
         Feito com HTML, CSS e JS.
       </span>
